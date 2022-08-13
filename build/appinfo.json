@@ -1,0 +1,30 @@
+{
+    "targetPlatforms": [
+        "aplite", 
+        "basalt", 
+        "chalk", 
+        "diorite"
+    ], 
+    "displayName": "HR-Ant+", 
+    "name": "hr-antplus-wf", 
+    "messageKeys": {
+        "HeartRate": 10000
+    }, 
+    "companyName": "Dasappan Kutty", 
+    "enableMultiJS": true, 
+    "versionLabel": "1.0", 
+    "capabilities": [], 
+    "sdkVersion": "3", 
+    "appKeys": {
+        "HeartRate": 10000
+    }, 
+    "longName": "HR-Ant+", 
+    "shortName": "HR-Ant+", 
+    "watchapp": {
+        "watchface": true
+    }, 
+    "resources": {
+        "media": []
+    }, 
+    "uuid": "604c3f86-77db-4574-aa2a-5a583aa3b309"
+}

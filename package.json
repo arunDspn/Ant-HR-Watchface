@@ -1,0 +1,29 @@
+{
+  "name": "hr-antplus-wf",
+  "author": "Dasappan Kutty",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "HR-Ant+",
+    "uuid": "604c3f86-77db-4574-aa2a-5a583aa3b309",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "HeartRate"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
