@@ -224,6 +224,8 @@ Discarded input sections
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_draw_bitmap_in_rect
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .text.graphics_draw_circle
+                0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_draw_line
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_draw_pixel
@@ -233,8 +235,6 @@ Discarded input sections
  .text.graphics_draw_round_rect
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_fill_circle
-                0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .text.graphics_fill_rect
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  .text.graphics_text_layout_get_max_used_size
                 0x0000000000000000        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
@@ -1173,7 +1173,7 @@ LOAD /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc
  .note.gnu.build-id
                 0x0000000000000084       0x24 linker stubs
 
-.text           0x00000000000000a8      0x77f
+.text           0x00000000000000a8      0x7a4
  *(.text)
  .text          0x00000000000000a8       0x14 /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  *(.text.*)
@@ -1190,198 +1190,199 @@ LOAD /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc
  .text.inbox_received_callback
                 0x000000000000015c       0xc0 src/c/hr-antplus-wf.c.33.o
  .text.battery_callback
-                0x000000000000021c       0x34 src/c/hr-antplus-wf.c.33.o
+                0x000000000000021c       0x3c src/c/hr-antplus-wf.c.33.o
  .text.prv_window_unload
-                0x0000000000000250       0x40 src/c/hr-antplus-wf.c.33.o
+                0x0000000000000258       0x40 src/c/hr-antplus-wf.c.33.o
  .text.prv_window_load
-                0x0000000000000290      0x19c src/c/hr-antplus-wf.c.33.o
+                0x0000000000000298      0x1ac src/c/hr-antplus-wf.c.33.o
  .text.bottom_section_layer_update
-                0x000000000000042c       0x28 src/c/hr-antplus-wf.c.33.o
+                0x0000000000000444       0x46 src/c/hr-antplus-wf.c.33.o
+ *fill*         0x000000000000048a        0x2 
  .text.startup.main
-                0x0000000000000454       0xf8 src/c/hr-antplus-wf.c.33.o
-                0x0000000000000454                main
+                0x000000000000048c       0xf8 src/c/hr-antplus-wf.c.33.o
+                0x000000000000048c                main
  .text.app_event_loop
-                0x000000000000054c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000054c                app_event_loop
- .text.app_log  0x0000000000000558        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000558                app_log
+                0x0000000000000584        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000584                app_event_loop
+ .text.app_log  0x0000000000000590        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000590                app_log
  .text.app_message_open
-                0x0000000000000564        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000564                app_message_open
+                0x000000000000059c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000059c                app_message_open
  .text.battery_state_service_peek
-                0x0000000000000570        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000570                battery_state_service_peek
+                0x00000000000005a8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005a8                battery_state_service_peek
  .text.battery_state_service_subscribe
-                0x000000000000057c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000057c                battery_state_service_subscribe
+                0x00000000000005b4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005b4                battery_state_service_subscribe
  .text.clock_is_24h_style
-                0x0000000000000588        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000588                clock_is_24h_style
+                0x00000000000005c0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005c0                clock_is_24h_style
  .text.dict_find
-                0x0000000000000594        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000594                dict_find
+                0x00000000000005cc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005cc                dict_find
  .text.fonts_get_system_font
-                0x00000000000005a0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005a0                fonts_get_system_font
- .text.graphics_draw_circle
-                0x00000000000005ac        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005ac                graphics_draw_circle
+                0x00000000000005d8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005d8                fonts_get_system_font
+ .text.graphics_fill_rect
+                0x00000000000005e4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005e4                graphics_fill_rect
  .text.layer_add_child
-                0x00000000000005b8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005b8                layer_add_child
+                0x00000000000005f0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005f0                layer_add_child
  .text.layer_create
-                0x00000000000005c4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005c4                layer_create
+                0x00000000000005fc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000005fc                layer_create
  .text.layer_destroy
-                0x00000000000005d0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005d0                layer_destroy
+                0x0000000000000608        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000608                layer_destroy
  .text.layer_get_bounds
-                0x00000000000005dc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005dc                layer_get_bounds
+                0x0000000000000614        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000614                layer_get_bounds
  .text.layer_set_update_proc
-                0x00000000000005e8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005e8                layer_set_update_proc
- .text.memset   0x00000000000005f4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000005f4                memset
+                0x0000000000000620        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000620                layer_set_update_proc
+ .text.memset   0x000000000000062c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000062c                memset
  .text.snprintf
-                0x0000000000000600        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000600                snprintf
+                0x0000000000000638        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000638                snprintf
  .text.strftime
-                0x000000000000060c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000060c                strftime
+                0x0000000000000644        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000644                strftime
  .text.tick_timer_service_subscribe
-                0x0000000000000618        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000618                tick_timer_service_subscribe
+                0x0000000000000650        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000650                tick_timer_service_subscribe
  .text.window_create
-                0x0000000000000624        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000624                window_create
+                0x000000000000065c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000065c                window_create
  .text.window_destroy
-                0x0000000000000630        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000630                window_destroy
+                0x0000000000000668        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000668                window_destroy
  .text.window_get_root_layer
-                0x000000000000063c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000063c                window_get_root_layer
+                0x0000000000000674        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000674                window_get_root_layer
  .text.window_set_window_handlers
-                0x0000000000000648        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000648                window_set_window_handlers
+                0x0000000000000680        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000680                window_set_window_handlers
  .text.window_stack_push
-                0x0000000000000654        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000654                window_stack_push
+                0x000000000000068c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000068c                window_stack_push
  .text.app_message_register_inbox_dropped
-                0x0000000000000660        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000660                app_message_register_inbox_dropped
+                0x0000000000000698        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000698                app_message_register_inbox_dropped
  .text.app_message_register_inbox_received
-                0x000000000000066c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000066c                app_message_register_inbox_received
+                0x00000000000006a4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006a4                app_message_register_inbox_received
  .text.app_message_register_outbox_failed
-                0x0000000000000678        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000678                app_message_register_outbox_failed
+                0x00000000000006b0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006b0                app_message_register_outbox_failed
  .text.app_message_register_outbox_sent
-                0x0000000000000684        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000684                app_message_register_outbox_sent
+                0x00000000000006bc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006bc                app_message_register_outbox_sent
  .text.graphics_context_set_fill_color
-                0x0000000000000690        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000690                graphics_context_set_fill_color
+                0x00000000000006c8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006c8                graphics_context_set_fill_color
  .text.localtime
-                0x000000000000069c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000069c                localtime
+                0x00000000000006d4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006d4                localtime
  .text.text_layer_create
-                0x00000000000006a8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006a8                text_layer_create
+                0x00000000000006e0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006e0                text_layer_create
  .text.text_layer_destroy
-                0x00000000000006b4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006b4                text_layer_destroy
+                0x00000000000006ec        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006ec                text_layer_destroy
  .text.text_layer_get_layer
-                0x00000000000006c0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006c0                text_layer_get_layer
+                0x00000000000006f8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000006f8                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x00000000000006cc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006cc                text_layer_set_background_color
+                0x0000000000000704        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000704                text_layer_set_background_color
  .text.text_layer_set_font
-                0x00000000000006d8        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006d8                text_layer_set_font
+                0x0000000000000710        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000710                text_layer_set_font
  .text.text_layer_set_text
-                0x00000000000006e4        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006e4                text_layer_set_text
+                0x000000000000071c        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000071c                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x00000000000006f0        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006f0                text_layer_set_text_alignment
+                0x0000000000000728        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000728                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x00000000000006fc        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000006fc                text_layer_set_text_color
- .text.time     0x0000000000000708        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000708                time
+                0x0000000000000734        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000734                text_layer_set_text_color
+ .text.time     0x0000000000000740        0xc /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000740                time
  *(.rodata)
- .rodata        0x0000000000000714        0x4 src/c/hr-antplus-wf.c.33.o
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000718      0x10f src/c/hr-antplus-wf.c.33.o
-                                        0x116 (size before relaxing)
+                0x000000000000074c      0x100 src/c/hr-antplus-wf.c.33.o
+                                        0x106 (size before relaxing)
 
-.glue_7         0x0000000000000828        0x0
+.glue_7         0x000000000000084c        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000828        0x0
+.glue_7t        0x000000000000084c        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000828        0x0
+.vfp11_veneer   0x000000000000084c        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000828        0x0
+.v4_bx          0x000000000000084c        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000828        0x0
+.iplt           0x000000000000084c        0x0
  .iplt          0x0000000000000000        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000000828        0x0
+.rel.dyn        0x000000000000084c        0x0
  .rel.iplt      0x0000000000000000        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .rel.got       0x0000000000000000        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000000828        0x8
+.data           0x000000000000084c        0x8
  *(.data)
- .data          0x0000000000000828        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000000828        0x4 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000828                __dso_handle
- .data          0x000000000000082c        0x0 src/c/hr-antplus-wf.c.33.o
- .data          0x000000000000082c        0x0 aplite/appinfo.auto.c.33.o
- .data          0x000000000000082c        0x0 aplite/src/resource_ids.auto.c.33.o
- .data          0x000000000000082c        0x0 src/message_keys.auto.c.33.o
- .data          0x000000000000082c        0x0 /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .data          0x000000000000082c        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x000000000000082c        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x000000000000084c        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x000000000000084c        0x4 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x000000000000084c                __dso_handle
+ .data          0x0000000000000850        0x0 src/c/hr-antplus-wf.c.33.o
+ .data          0x0000000000000850        0x0 aplite/appinfo.auto.c.33.o
+ .data          0x0000000000000850        0x0 aplite/src/resource_ids.auto.c.33.o
+ .data          0x0000000000000850        0x0 src/message_keys.auto.c.33.o
+ .data          0x0000000000000850        0x0 /home/arundas/.pebble-sdk/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .data          0x0000000000000850        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000000850        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
  .data.MESSAGE_KEY_HeartRate
-                0x000000000000082c        0x4 src/message_keys.auto.c.33.o
-                0x000000000000082c                MESSAGE_KEY_HeartRate
+                0x0000000000000850        0x4 src/message_keys.auto.c.33.o
+                0x0000000000000850                MESSAGE_KEY_HeartRate
 
-.igot.plt       0x0000000000000830        0x0
+.igot.plt       0x0000000000000854        0x0
  .igot.plt      0x0000000000000000        0x0 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got            0x0000000000000830        0x4
- .got           0x0000000000000830        0x4 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+.got            0x0000000000000854        0x4
+ .got           0x0000000000000854        0x4 /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.got.plt        0x0000000000000834        0xc
- .got.plt       0x0000000000000834        0xc /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000834                _GLOBAL_OFFSET_TABLE_
+.got.plt        0x0000000000000858        0xc
+ .got.plt       0x0000000000000858        0xc /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000000858                _GLOBAL_OFFSET_TABLE_
 
-.bss            0x0000000000000840       0x24
+.bss            0x0000000000000864       0x28
  *(.bss)
  *(.bss.*)
- .bss.batt_buffer.7493
-                0x0000000000000840        0x4 src/c/hr-antplus-wf.c.33.o
+ .bss.s_buffer.7486
+                0x0000000000000864        0x8 src/c/hr-antplus-wf.c.33.o
+ .bss.s_window  0x000000000000086c        0x4 src/c/hr-antplus-wf.c.33.o
+ .bss.batt_buffer.7494
+                0x0000000000000870        0x6 src/c/hr-antplus-wf.c.33.o
+ *fill*         0x0000000000000876        0x2 
  .bss.s_time_layer
-                0x0000000000000844        0x4 src/c/hr-antplus-wf.c.33.o
- .bss.s_buffer.7485
-                0x0000000000000848        0x8 src/c/hr-antplus-wf.c.33.o
- .bss.hr_buf.7500
-                0x0000000000000850        0x4 src/c/hr-antplus-wf.c.33.o
- .bss.s_window  0x0000000000000854        0x4 src/c/hr-antplus-wf.c.33.o
- .bss.s_bottom_section_layer
-                0x0000000000000858        0x4 src/c/hr-antplus-wf.c.33.o
+                0x0000000000000878        0x4 src/c/hr-antplus-wf.c.33.o
  .bss.s_heart_rate_layer
-                0x000000000000085c        0x4 src/c/hr-antplus-wf.c.33.o
+                0x000000000000087c        0x4 src/c/hr-antplus-wf.c.33.o
+ .bss.hr_buf.7501
+                0x0000000000000880        0x4 src/c/hr-antplus-wf.c.33.o
+ .bss.s_bottom_section_layer
+                0x0000000000000884        0x4 src/c/hr-antplus-wf.c.33.o
  .bss.s_battery_level
-                0x0000000000000860        0x4 src/c/hr-antplus-wf.c.33.o
+                0x0000000000000888        0x4 src/c/hr-antplus-wf.c.33.o
 
 DISCARD
  libc.a(*)
@@ -1420,11 +1421,11 @@ OUTPUT(/home/arundas/dev/pebble-time/hr-antplus-wf/build/aplite/pebble-app.elf e
  .comment       0x0000000000000000       0x4f src/message_keys.auto.c.33.o
  .comment       0x0000000000000000       0x4f /home/arundas/pebble-dev/pebble-sdk-4.5-linux64/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x17b6
- .debug_info    0x0000000000000000     0x13b7 src/c/hr-antplus-wf.c.33.o
- .debug_info    0x00000000000013b7      0x31a aplite/appinfo.auto.c.33.o
- .debug_info    0x00000000000016d1       0x64 aplite/src/resource_ids.auto.c.33.o
- .debug_info    0x0000000000001735       0x81 src/message_keys.auto.c.33.o
+.debug_info     0x0000000000000000     0x1880
+ .debug_info    0x0000000000000000     0x1481 src/c/hr-antplus-wf.c.33.o
+ .debug_info    0x0000000000001481      0x31a aplite/appinfo.auto.c.33.o
+ .debug_info    0x000000000000179b       0x64 aplite/src/resource_ids.auto.c.33.o
+ .debug_info    0x00000000000017ff       0x81 src/message_keys.auto.c.33.o
 
 .debug_abbrev   0x0000000000000000      0x433
  .debug_abbrev  0x0000000000000000      0x32b src/c/hr-antplus-wf.c.33.o
@@ -1432,8 +1433,8 @@ OUTPUT(/home/arundas/dev/pebble-time/hr-antplus-wf/build/aplite/pebble-app.elf e
  .debug_abbrev  0x00000000000003c9       0x26 aplite/src/resource_ids.auto.c.33.o
  .debug_abbrev  0x00000000000003ef       0x44 src/message_keys.auto.c.33.o
 
-.debug_loc      0x0000000000000000      0x37e
- .debug_loc     0x0000000000000000      0x37e src/c/hr-antplus-wf.c.33.o
+.debug_loc      0x0000000000000000      0x3a3
+ .debug_loc     0x0000000000000000      0x3a3 src/c/hr-antplus-wf.c.33.o
 
 .debug_aranges  0x0000000000000000       0xb8
  .debug_aranges
@@ -1448,21 +1449,21 @@ OUTPUT(/home/arundas/dev/pebble-time/hr-antplus-wf/build/aplite/pebble-app.elf e
 .debug_ranges   0x0000000000000000       0x78
  .debug_ranges  0x0000000000000000       0x78 src/c/hr-antplus-wf.c.33.o
 
-.debug_line     0x0000000000000000      0x5ab
- .debug_line    0x0000000000000000      0x3a5 src/c/hr-antplus-wf.c.33.o
- .debug_line    0x00000000000003a5      0x123 aplite/appinfo.auto.c.33.o
- .debug_line    0x00000000000004c8       0x1d aplite/src/resource_ids.auto.c.33.o
- .debug_line    0x00000000000004e5       0xc6 src/message_keys.auto.c.33.o
+.debug_line     0x0000000000000000      0x5b9
+ .debug_line    0x0000000000000000      0x3b3 src/c/hr-antplus-wf.c.33.o
+ .debug_line    0x00000000000003b3      0x123 aplite/appinfo.auto.c.33.o
+ .debug_line    0x00000000000004d6       0x1d aplite/src/resource_ids.auto.c.33.o
+ .debug_line    0x00000000000004f3       0xc6 src/message_keys.auto.c.33.o
 
-.debug_str      0x0000000000000000      0xca9
- .debug_str     0x0000000000000000      0xa3c src/c/hr-antplus-wf.c.33.o
-                                        0xaf4 (size before relaxing)
- .debug_str     0x0000000000000a3c      0x236 aplite/appinfo.auto.c.33.o
+.debug_str      0x0000000000000000      0xd45
+ .debug_str     0x0000000000000000      0xad8 src/c/hr-antplus-wf.c.33.o
+                                        0xb90 (size before relaxing)
+ .debug_str     0x0000000000000ad8      0x236 aplite/appinfo.auto.c.33.o
                                         0x320 (size before relaxing)
- .debug_str     0x0000000000000c72       0x1f aplite/src/resource_ids.auto.c.33.o
+ .debug_str     0x0000000000000d0e       0x1f aplite/src/resource_ids.auto.c.33.o
                                          0xe1 (size before relaxing)
- .debug_str     0x0000000000000c91       0x18 src/message_keys.auto.c.33.o
+ .debug_str     0x0000000000000d2d       0x18 src/message_keys.auto.c.33.o
                                          0xf9 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x128
- .debug_frame   0x0000000000000000      0x128 src/c/hr-antplus-wf.c.33.o
+.debug_frame    0x0000000000000000      0x130
+ .debug_frame   0x0000000000000000      0x130 src/c/hr-antplus-wf.c.33.o

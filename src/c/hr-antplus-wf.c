@@ -8,12 +8,9 @@ static TextLayer *s_battery_level;
 static Layer *s_bottom_section_layer;
 
 static void bottom_section_layer_update(Layer *layer, GContext *ctx){
-  // graphics_draw_rect(ctx,GRect(0, 120, bounds.size.w/2, 25));
-
-  graphics_context_set_fill_color(ctx,GColorDarkGreen);
-
-  graphics_draw_circle(ctx,GPoint(50,80),5);
-
+  const GRect bounds = layer_get_bounds(layer);
+  graphics_context_set_fill_color(ctx,GColorCadetBlue);
+  graphics_fill_rect(ctx, GRect(0,0,bounds.size.w,bounds.size.h), 0, GCornerNone);
 }
 
 static void update_time() {
@@ -39,10 +36,12 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void battery_callback(BatteryChargeState state) {
   // Record the new battery level
-  static char batt_buffer[4];
-  snprintf(batt_buffer,sizeof(batt_buffer),"%d",(int)state.charge_percent);
+  static char batt_buffer[6];
+  snprintf(batt_buffer,sizeof(batt_buffer),"%d%s",(int)state.charge_percent,"%");
   text_layer_set_text(s_battery_level,batt_buffer);
 }
+
+
 
 static void inbox_received_callback(DictionaryIterator *iter, void *context) {
 
@@ -83,7 +82,6 @@ static void outbox_sent_callback(DictionaryIterator *iterator, void *context) {
 }
 
 
-
 static void prv_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
@@ -91,30 +89,32 @@ static void prv_window_load(Window *window) {
   // Heart Rate
   s_heart_rate_layer = text_layer_create(GRect(0, 30, bounds.size.w, 50));
   text_layer_set_text(s_heart_rate_layer, "123");
-  text_layer_set_font(s_heart_rate_layer,fonts_get_system_font(FONT_KEY_LECO_42_NUMBERS));
+  text_layer_set_font(s_heart_rate_layer,fonts_get_system_font(FONT_KEY_ROBOTO_BOLD_SUBSET_49));
   text_layer_set_text_alignment(s_heart_rate_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_heart_rate_layer));
 
   // Bottom Section
-  s_bottom_section_layer = layer_create(GRect(0,100, bounds.size.w, 100));
+  s_bottom_section_layer = layer_create(GRect(0,110, bounds.size.w, 100));
   // s_bottom_section_layer = layer_create(bounds);
   layer_set_update_proc(s_bottom_section_layer,bottom_section_layer_update);
   layer_add_child(window_layer,s_bottom_section_layer);
 
 
   // Time
-  s_time_layer = text_layer_create(GRect(0, 120, bounds.size.w/2, 25));
-  text_layer_set_font(s_time_layer,fonts_get_system_font(FONT_KEY_LECO_20_BOLD_NUMBERS));
+  s_time_layer = text_layer_create(GRect(0, 120, bounds.size.w/2, 30));
+  text_layer_set_font(s_time_layer,fonts_get_system_font(FONT_KEY_LECO_26_BOLD_NUMBERS_AM_PM));
   text_layer_set_text(s_time_layer, "10:23");
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
+  text_layer_set_background_color(s_time_layer,GColorClear);
+  text_layer_set_text_color(s_time_layer,GColorWhite);
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
 
 
   // Battery Level
-  s_battery_level = text_layer_create(GRect(bounds.size.w/2, 120, bounds.size.w/2, 25));
-  text_layer_set_font(s_battery_level,fonts_get_system_font(FONT_KEY_ROBOTO_CONDENSED_21));
+  s_battery_level = text_layer_create(GRect(bounds.size.w/2, 120, bounds.size.w/2, 30));
+  text_layer_set_font(s_battery_level,fonts_get_system_font(FONT_KEY_LECO_26_BOLD_NUMBERS_AM_PM));
   text_layer_set_text(s_battery_level, "50%");
-  text_layer_set_background_color(s_battery_level,GColorDarkGreen);
+  text_layer_set_background_color(s_battery_level,GColorClear);
   text_layer_set_text_color(s_battery_level,GColorWhite);
   text_layer_set_text_alignment(s_battery_level, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_battery_level));
